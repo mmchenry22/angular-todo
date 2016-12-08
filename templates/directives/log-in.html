@@ -1,0 +1,32 @@
+<div>
+<div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                    <h2>Log in</h2>
+                    Already created an account? Well just login then!
+                    <button class="button" onclick="$('#target').toggle();">
+                    Let me log in!
+                    </button>
+            <div id="target" style="display:none">
+                <form name="logInForm" ng-submit="submitForm()" novalidate>
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" name="name" class="form-control" ng-model="user.username" required>
+                        <p ng-show="registrationForm.name.$pristine" class="help-block">Your username is required</p>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" name="password" class="form-control" ng-model="user.password" required>
+                        <p ng-show="registrationForm.password.$pristine" class="help-block">Your password is required</p>
+                    </div>
+ 
+                    <button type="submit" class="btn btn-primary" ng-disabled="registrationForm.$invalid">Submit</button>
+                
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
